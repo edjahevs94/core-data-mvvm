@@ -20,8 +20,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(fetchedTaskList) {
-                    item in Text(item.title ?? " ")
+                ForEach(fetchedTaskList.filter({$0.isFavorite == true
+                })) {
+                    item in
+                    TaskListCell(taskListItem: item)
                 }
             }.sheet(isPresented: $addView, content: {
                 AddListView(addView: $addView)

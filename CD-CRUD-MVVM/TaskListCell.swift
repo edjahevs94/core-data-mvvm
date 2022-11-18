@@ -11,6 +11,7 @@ struct TaskListCell: View {
     
     @ObservedObject var taskListItem: TaskList
     
+    @State private var isEdit = false
     
     
     var body: some View {
@@ -23,10 +24,13 @@ struct TaskListCell: View {
                 }
                 Text("\(taskListItem.date!.formatted(.dateTime.month().day().hour().minute()))")
             }
-            Spacer()
+            Spacer(minLength: 2)
             Button(action: {}, label: {
                 Image(systemName: !taskListItem.isDone ? "circle": "checkmark.circle")
             }).tint(.blue)
+        }
+        .sheet(isPresented: $isEdit) {
+            AddListView(addView: $isEdit)
         }
         .swipeActions(edge: .leading , allowsFullSwipe: true) {
             Button(action: {
@@ -39,9 +43,12 @@ struct TaskListCell: View {
             Button(role: .destructive, action: {}, label: {
                 Label("Delete", systemImage: "trash")
             })
-            Button(role: .destructive, action: {}, label: {
+            Button(action: {
+                isEdit.toggle()
+            }, label: {
                 Label("Edit", systemImage: "pencil")
             })
+            .tint(.yellow)
         }
     }
 }
