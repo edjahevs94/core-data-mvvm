@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject var taskList: TaskListViewModel
+    
+    @FetchRequest(entity: TaskList.entity(), sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)]) var fetchedTaskList:FetchedResults<TaskList>
+    
+    @State private var addView = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(fetchedTaskList) {
+                    item in Text(item.title ?? " ")
+                }
+            }.sheet(isPresented: $addView, content: {
+                AddListView(addView: $addView)
+            })
+            .toolbar {
+                Button(action: {
+                    addView.toggle()
+                }, label: {
+                    Label("Add item", systemImage: "plus")
+                })
+            }
+            .navigationTitle("CD CRUD MVVM")
+            
         }
-        .padding()
     }
 }
 

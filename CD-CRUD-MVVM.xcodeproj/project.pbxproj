@@ -11,6 +11,11 @@
 		BE6294492927C32B000C300C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6294482927C32B000C300C /* ContentView.swift */; };
 		BE62944B2927C32D000C300C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE62944A2927C32D000C300C /* Assets.xcassets */; };
 		BE62944E2927C32D000C300C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE62944D2927C32D000C300C /* Preview Assets.xcassets */; };
+		BE6294562927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE6294542927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodeld */; };
+		BE6294582927C4B2000C300C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6294572927C4B2000C300C /* Persistence.swift */; };
+		BE62945A2927CA4A000C300C /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6294592927CA4A000C300C /* TaskListViewModel.swift */; };
+		BE62945E2927F3BC000C300C /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE62945D2927F3BC000C300C /* AddListView.swift */; };
+		BE629460292814DF000C300C /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE62945F292814DF000C300C /* TaskListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		BE6294482927C32B000C300C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE62944A2927C32D000C300C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE62944D2927C32D000C300C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE6294552927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CD_CRUD_MVVM.xcdatamodel; sourceTree = "<group>"; };
+		BE6294572927C4B2000C300C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		BE6294592927CA4A000C300C /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		BE62945D2927F3BC000C300C /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
+		BE62945F292814DF000C300C /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,13 @@
 			children = (
 				BE6294462927C32B000C300C /* CD_CRUD_MVVMApp.swift */,
 				BE6294482927C32B000C300C /* ContentView.swift */,
+				BE6294572927C4B2000C300C /* Persistence.swift */,
 				BE62944A2927C32D000C300C /* Assets.xcassets */,
 				BE62944C2927C32D000C300C /* Preview Content */,
+				BE6294542927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodeld */,
+				BE6294592927CA4A000C300C /* TaskListViewModel.swift */,
+				BE62945D2927F3BC000C300C /* AddListView.swift */,
+				BE62945F292814DF000C300C /* TaskListCell.swift */,
 			);
 			path = "CD-CRUD-MVVM";
 			sourceTree = "<group>";
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE629460292814DF000C300C /* TaskListCell.swift in Sources */,
 				BE6294492927C32B000C300C /* ContentView.swift in Sources */,
+				BE6294582927C4B2000C300C /* Persistence.swift in Sources */,
+				BE62945E2927F3BC000C300C /* AddListView.swift in Sources */,
+				BE62945A2927CA4A000C300C /* TaskListViewModel.swift in Sources */,
 				BE6294472927C32B000C300C /* CD_CRUD_MVVMApp.swift in Sources */,
+				BE6294562927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +359,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE6294542927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE6294552927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodel */,
+			);
+			currentVersion = BE6294552927C3F3000C300C /* CD_CRUD_MVVM.xcdatamodel */;
+			path = CD_CRUD_MVVM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE62943B2927C32B000C300C /* Project object */;
 }
